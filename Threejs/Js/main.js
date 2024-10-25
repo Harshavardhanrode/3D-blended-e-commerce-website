@@ -5,7 +5,7 @@ import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/l
 
 
 
-let hashmap = new Map([[1,"logitech Keyboard"],[2,"8kg dumbells(4kg each)"],[3,"iphone 13 pro max"]]);
+let hashmap = new Map([[1,"logitech Keyboard"],[2,"8kg dumbells(4kg each)"],[3,"iphone 13 pro max"],[11,"Steel Hammer"]]);
 
 const imgNo = sessionStorage.getItem('img_no');
 document.querySelector('h1').innerHTML=hashmap.get(Number(imgNo));
@@ -38,7 +38,11 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById("container3D").appendChild(renderer.domElement);        //Add the renderer to the DOM
 
 
-camera.position.z = 8;                                                         //Set how far the camera will be from the 3D model
+camera.position.z = 8;   
+if(imgNo=='11'){
+  camera.position.z = 20;// for hammer object 
+}
+                                                    //Set how far the camera will be from the 3D model
 //Add lights to the scene
 const topLight = new THREE.DirectionalLight('white', 1);                                        // (color, intensity)
 topLight.position.set(500, 500, 500)                                                             //top-left-ish
