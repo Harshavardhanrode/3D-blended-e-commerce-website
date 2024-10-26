@@ -5,7 +5,7 @@ import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/l
 
 
 
-let hashmap = new Map([[1,"logitech Keyboard"],[2,"8kg dumbells(4kg each)"],[3,"iphone 13 pro max"],[4,"MI Smart TV (32 inch)"],[11,"Steel Hammer"]]);
+let hashmap = new Map([[1,"logitech Keyboard"],[2,"8kg dumbells(4kg each)"],[3,"iphone 13 pro max"],[4,"MI Smart TV (32 inch)"],[5," golden Wine glass set(6 pieces)"],[11,"Steel Hammer"]]);
 
 const imgNo = sessionStorage.getItem('img_no');
 document.querySelector('h1').innerHTML=hashmap.get(Number(imgNo));
