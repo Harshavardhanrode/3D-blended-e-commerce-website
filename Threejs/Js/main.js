@@ -5,7 +5,7 @@ import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/l
 
 
 
-let hashmap = new Map([[1,"logitech Keyboard"],[2,"8kg dumbells(4kg each)"],[3,"iphone 13 pro max"],[4,"MI Smart TV (32 inch)"],[5," golden Wine glass set(6 pieces)"],[6," china metal bottles"],[7,"MI Powerbank (20000 MAH)"],[8,"Hydro flask"],[12,"Hydro flask"],[11,"Steel Hammer"],[20,"MI Smart TV (32 inch)"]]);
+let hashmap = new Map([[1,"logitech Keyboard"],[2,"8kg dumbells(4kg each)"],[3,"iphone 13 pro max"],[4,"MI Smart TV (32 inch)"],[5," golden Wine glass set(6 pieces)"],[6," china metal bottles"],[7,"MI Powerbank (20000 MAH)"],[8,"Hydro flask"],[9,"Steel Hammer"],[12,"Hydro flask"],[11,"Steel Hammer"],[20,"MI Smart TV (32 inch)"]]);
 
 const imgNo = sessionStorage.getItem('img_no');
 document.querySelector('h1').innerHTML=hashmap.get(Number(imgNo));
@@ -39,7 +39,7 @@ document.getElementById("container3D").appendChild(renderer.domElement);        
 
 
 camera.position.z = 8;   
-if(imgNo=='11'){
+if(imgNo=='11' || imgNo=='9'){
   camera.position.z = 20;// for hammer object 
 }
                                                     //Set how far the camera will be from the 3D model
