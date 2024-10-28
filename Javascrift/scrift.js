@@ -13,23 +13,29 @@ function changeslide(){
 }
 changeslide();
 
+
 prev_btn.addEventListener('click',(e)=>{
     if(n>0){
         n--;
-    }else{
+    }
+    else
+    {
         n =images.length-1; 
     }
     changeslide();
 })
 
+
 next_btn.addEventListener('click',(e)=>{
-    if(n<images.length-1){
+    if(n<images.length-1)
+        {
         n++;
     }else{
         n=0; 
     }
     changeslide();
 })
+
 
 //for scrolling images
 const scrollcontainer = document.querySelectorAll('.products');
@@ -39,6 +45,8 @@ for(const ele of scrollcontainer){
         ele.scrollLeft += evt.deltaY;
     })
 }
+
+
 
 
 // connection between three.js and website
