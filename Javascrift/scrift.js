@@ -57,4 +57,9 @@ function redirect(img_no){
 
   }
 
+  let signup_page = document.getElementById("Signup-login-page");
+  signup_page.addEventListener('click',()=>{
+    window.location.href = 'Html/signup.html';
+  });
+
 
